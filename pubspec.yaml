@@ -1,0 +1,52 @@
+name: smart_shopping_assistant
+description: Application for making shoping easier with handling multiple lists for multiple stores.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ui
+  cupertino_icons: ^1.0.3
+  font_awesome_flutter: ^9.1.0
+  intro_slider: ^3.0.2
+
+  #frameworks
+  get: ^4.2.4
+  dartz: ^0.10.0-nullsafety.2
+
+  #storage
+  shared_preferences: ^2.0.6
+
+  #logging
+  logging: ^1.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  #testing
+  test: ^1.15.7 #can not upgrade to null safety versions because of conflicts with flutter_test
+  mockito: ^5.0.12
+
+  #compile
+  lint: ^1.5.3
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/i18n/
+    - assets/icons/
+    - assets/images/
+    - test/
+    - test/intro/
+    - test/intro/data/repositories/
+    - test/intro/data/

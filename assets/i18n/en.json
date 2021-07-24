@@ -1,0 +1,48 @@
+{
+  "app": {
+    "title": "SmartShoppingAssistant"
+  },
+  "button": {
+    "logout": "Logout"
+  },
+  "form": {
+    "login": {
+      "field": {
+        "email": {
+          "text": "Email"
+        },
+        "password": {
+          "labelText": "Password"
+        }
+      }
+    },
+    "validators": {
+      "required": {
+        "errorText": "Required!"
+      }
+    }
+  },
+  "page": {
+    "error": {
+      "default_message": "Oooops, this didn't supposed to happen"
+    },
+    "login": {
+      "title": "Login"
+    },
+    "landing": {
+      "button": {
+        "mail_login": {
+          "text": "Login with mail"
+        },
+        "google_login": {
+          "text": "Google login"
+        },
+        "register": {
+          "text": "Register"
+        }
+      },
+      "header_text": "Welcome to the smart assistant application",
+      "welcome_text": "To use application please go to login page. If you do not have account, please register."
+    }
+  }
+}
