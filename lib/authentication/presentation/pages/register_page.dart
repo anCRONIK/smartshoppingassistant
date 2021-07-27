@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/presentation/widgets/abstract_application_page.dart';
+import '../../../styles.dart';
+import '../widgets/register_form.dart';
 
-class RegisterPage extends AbstractApplicationPage {
+class RegisterPage extends StatelessWidget {
   @override
-  Widget buildLandscapeLayout() {
-    // TODO: implement buildLandscapeLayout
-    throw UnimplementedError();
-  }
-
-  @override
-  Widget buildPortraitLayout() {
-    // TODO: implement buildPortraitLayout
-    throw UnimplementedError();
+  Widget build(BuildContext context) {
+    return Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(),
+        body: SafeArea(child: SingleChildScrollView(padding: defaultScreenPadding, child: RegisterForm())));
   }
 }

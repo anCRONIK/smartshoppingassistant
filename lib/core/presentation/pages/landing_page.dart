@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import '../../../routing.dart';
 import '../../../styles.dart';
+import '../widgets/app_bar_widgets.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -16,7 +17,9 @@ class LandingPage extends StatelessWidget {
           onPressed: () => Get.toNamed(AppRoutes.REGISTER),
         )
       ],
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [changeAppThemeActionButton],
+      ),
       body: SafeArea(
         child: Padding(
           padding: defaultScreenPadding,
@@ -24,9 +27,9 @@ class LandingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text('page.landing.header_text'.tr, style: Style.title),
+              Text('page.landing.header_text'.tr, style: AppTextStyle.headline),
               Container(height: 24.0),
-              Text('page.landing.welcome_text'.tr, style: Style.body1),
+              Text('page.landing.welcome_text'.tr, style: AppTextStyle.body1),
               Container(height: 32.0),
               Card(
                 elevation: 4,
@@ -36,14 +39,26 @@ class LandingPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        ElevatedButton.icon(
-                          icon: const Icon(Icons.mail),
-                          label: Text('page.landing.button.mail_login.text'.tr.toUpperCase()),
+                        MaterialButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            side: BorderSide(color: Theme.of(context).primaryColor),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [const Icon(Icons.mail), Text('page.landing.button.mail_login.text'.tr.toUpperCase())],
+                          ),
                           onPressed: () => Get.toNamed(AppRoutes.LOGIN),
                         ),
-                        ElevatedButton.icon(
-                          icon: const Icon(FontAwesomeIcons.google),
-                          label: Text('page.landing.button.google_login.text'.tr.toUpperCase()),
+                        MaterialButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            side: BorderSide(color: Theme.of(context).primaryColor),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [const Icon(FontAwesomeIcons.google), Text('page.landing.button.google_login.text'.tr.toUpperCase())],
+                          ),
                           onPressed: () {},
                         ),
                       ],

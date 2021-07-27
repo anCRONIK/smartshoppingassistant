@@ -6,6 +6,9 @@ import '../widgets/login_form.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: SafeArea(child: Padding(padding: defaultScreenPadding, child: LogInForm())));
+    return Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(),
+        body: SafeArea(child: SingleChildScrollView(padding: defaultScreenPadding, child: LogInForm())));
   }
 }

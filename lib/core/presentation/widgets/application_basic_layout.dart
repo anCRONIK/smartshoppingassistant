@@ -38,10 +38,11 @@ class ApplicationBasicLayout {
 
   Widget _buildMobileLayout(AbstractApplicationPage _page) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: _appBar,
         drawer: _drawer,
         body: SafeArea(
-            child: Container(
+            child: SingleChildScrollView(
                 padding: defaultScreenPadding,
                 child: _context.orientation == Orientation.portrait ? _page.buildPortraitLayout() : _page.buildLandscapeLayout())));
   }

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 import 'authentication/presentation/pages/login_page.dart';
+import 'authentication/presentation/pages/register_page.dart';
 import 'core/presentation/pages/error_page.dart';
 import 'core/presentation/pages/landing_page.dart';
 import 'intro/intro_routing_middleware.dart';
@@ -15,6 +16,8 @@ class AppPages {
     errorRoute,
 
     GetPage(name: AppRoutes.LOGIN, page: () => LoginPage()),
+
+    GetPage(name: AppRoutes.REGISTER, page: () => RegisterPage()),
 
     GetPage(name: AppRoutes.INTRO, page: () => IntroPage()),
 

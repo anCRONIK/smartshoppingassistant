@@ -2,17 +2,56 @@
   "app": {
     "title": "SmartShoppingAssistant"
   },
+  "appbar": {
+    "button": {
+      "change_theme": {
+        "tooltip": "Change application theme"
+      }
+    }
+  },
   "button": {
     "logout": "Logout"
   },
   "form": {
     "login": {
+      "button": {
+        "mail_login": {
+          "text": "Login"
+        }
+      },
       "field": {
         "email": {
           "text": "Email"
         },
         "password": {
           "labelText": "Password"
+        }
+      }
+    },
+    "register": {
+      "button": {
+        "register": {
+          "text": "Register"
+        }
+      },
+      "field": {
+        "email": {
+          "text": "Email"
+        },
+        "first_name": {
+          "text": "First name"
+        },
+        "last_name": {
+          "text": "Last name"
+        },
+        "password": {
+          "labelText": "Password"
+        },
+        "password_confirm": {
+          "labelText": "Confirm password"
+        },
+        "username": {
+          "text": "Username"
         }
       }
     },

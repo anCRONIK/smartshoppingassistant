@@ -57,12 +57,7 @@ class LogInFormState extends State {
               onPressed: () {
                 final form = _formKey.currentState;
               },
-              child: Text("form.login.button.mail_login.text".tr)),
-          MaterialButton(
-              onPressed: () {
-                // _authController.handleGoogleSignIn();
-              },
-              child: Text("form.login.button.google_login.text".tr))
+              child: Text("form.login.button.mail_login.text".tr))
         ],
       ),
     );
